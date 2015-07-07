@@ -1,0 +1,12 @@
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\TPVDataLayer.dll.config
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\TPVDataLayer.dll
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\TPVDataLayer.pdb
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\EntityFramework.dll
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\EntityFramework.xml
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\Pruebas\TPVDataLayer\obj\Debug\TPVDataLayer.csprojResolveAssemblyReference.cache
+C:\Projects\Pruebas\TPVDataLayer\obj\Debug\TPVDataLayer.dll
+C:\Projects\Pruebas\TPVDataLayer\obj\Debug\TPVDataLayer.pdb
+C:\Projects\Pruebas\TPVDataLayer\bin\Debug\MySql.Data.dll

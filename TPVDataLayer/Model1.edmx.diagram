@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="453d13e5c8e940dbb505fdb71d4f755e" Name="Diagram1">
+        <EntityTypeShape EntityType="tpvenlanubecalendarModel.calendarevent" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="tpvenlanubecalendarModel.clients" Width="1.5" PointX="5.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="tpvenlanubecalendarModel.resource" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="tpvenlanubecalendarModel.resourcestimeoff" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="tpvenlanubecalendarModel.servicios" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tpvenlanubecalendarModel.shoptimetable" Width="1.5" PointX="5.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="tpvenlanubecalendarModel.shopworkingslices" Width="1.5" PointX="8" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="tpvenlanubecalendarModel.resourceid" ManuallyRouted="false" />
+        <AssociationConnector Association="tpvenlanubecalendarModel.serviceid" ManuallyRouted="false" />
+        <AssociationConnector Association="tpvenlanubecalendarModel.idResource" ManuallyRouted="false" />
+        <AssociationConnector Association="tpvenlanubecalendarModel.id" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

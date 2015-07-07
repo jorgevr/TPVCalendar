@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tpvenlanubecalendarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="calendarevent">
+    <Key>
+      <PropertyRef Name="idcalendarevent" />
+    </Key>
+    <Property Name="idcalendarevent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resourceid" Type="Int32" Nullable="false" />
+    <Property Name="begindate" Type="DateTime" Nullable="false" />
+    <Property Name="enddate" Type="DateTime" Nullable="false" />
+    <Property Name="serviceid" Type="Int32" Nullable="false" />
+    <Property Name="clientId" Type="Int32" />
+    <Property Name="locked" Type="Int32" />
+    <NavigationProperty Name="resource" Relationship="Self.resourceid" FromRole="calendarevent" ToRole="resource" />
+    <NavigationProperty Name="servicios" Relationship="Self.serviceid" FromRole="calendarevent" ToRole="servicios" />
+  </EntityType>
+  <EntityType Name="clients">
+    <Key>
+      <PropertyRef Name="clientId" />
+    </Key>
+    <Property Name="clientId" Type="Int64" Nullable="false" />
+    <Property Name="clientName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numberOfVisits" Type="Int32" />
+    <Property Name="lastService" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="lastProduct" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="contactNumber" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="clientPicture" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="resource">
+    <Key>
+      <PropertyRef Name="idResource" />
+    </Key>
+    <Property Name="idResource" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="calendarevent" Relationship="Self.resourceid" FromRole="resource" ToRole="calendarevent" />
+    <NavigationProperty Name="resourcestimeoff" Relationship="Self.idResource" FromRole="resource" ToRole="resourcestimeoff" />
+  </EntityType>
+  <EntityType Name="resourcestimeoff">
+    <Key>
+      <PropertyRef Name="idresourcestimeoff" />
+    </Key>
+    <Property Name="idresourcestimeoff" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="startTimeOff" Type="DateTime" />
+    <Property Name="endTimeOff" Type="DateTime" />
+    <Property Name="resourceFK" Type="Int32" />
+    <NavigationProperty Name="resource" Relationship="Self.idResource" FromRole="resourcestimeoff" ToRole="resource" />
+  </EntityType>
+  <EntityType Name="servicios">
+    <Key>
+      <PropertyRef Name="idServicios" />
+    </Key>
+    <Property Name="idServicios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="serviceName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="averageDuration" Type="Int32" />
+    <Property Name="defaultColor" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="calendarevent" Relationship="Self.serviceid" FromRole="servicios" ToRole="calendarevent" />
+  </EntityType>
+  <EntityType Name="shoptimetable">
+    <Key>
+      <PropertyRef Name="idshoptimetable" />
+    </Key>
+    <Property Name="idshoptimetable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sliceStart" Type="DateTime" Nullable="false" />
+    <Property Name="sliceEnd" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="shopworkingslices" Relationship="Self.id" FromRole="shoptimetable" ToRole="shopworkingslices" />
+  </EntityType>
+  <EntityType Name="shopworkingslices">
+    <Key>
+      <PropertyRef Name="idshopworkingslices" />
+    </Key>
+    <Property Name="idshopworkingslices" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="startTime" Type="Time" Nullable="false" />
+    <Property Name="endTime" Type="Time" Nullable="false" />
+    <Property Name="shopTimeTableId" Type="Int32" />
+    <NavigationProperty Name="shoptimetable" Relationship="Self.id" FromRole="shopworkingslices" ToRole="shoptimetable" />
+  </EntityType>
+  <Association Name="resourceid">
+    <End Role="resource" Type="Self.resource" Multiplicity="1" />
+    <End Role="calendarevent" Type="Self.calendarevent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="idResource" />
+      </Principal>
+      <Dependent Role="calendarevent">
+        <PropertyRef Name="resourceid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="serviceid">
+    <End Role="servicios" Type="Self.servicios" Multiplicity="1" />
+    <End Role="calendarevent" Type="Self.calendarevent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servicios">
+        <PropertyRef Name="idServicios" />
+      </Principal>
+      <Dependent Role="calendarevent">
+        <PropertyRef Name="serviceid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="idResource">
+    <End Role="resource" Type="Self.resource" Multiplicity="0..1" />
+    <End Role="resourcestimeoff" Type="Self.resourcestimeoff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resource">
+        <PropertyRef Name="idResource" />
+      </Principal>
+      <Dependent Role="resourcestimeoff">
+        <PropertyRef Name="resourceFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="id">
+    <End Role="shoptimetable" Type="Self.shoptimetable" Multiplicity="0..1" />
+    <End Role="shopworkingslices" Type="Self.shopworkingslices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="shoptimetable">
+        <PropertyRef Name="idshoptimetable" />
+      </Principal>
+      <Dependent Role="shopworkingslices">
+        <PropertyRef Name="shopTimeTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="tpvenlanubecalendarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="calendarevent" EntityType="Self.calendarevent" />
+    <EntitySet Name="clients" EntityType="Self.clients" />
+    <EntitySet Name="resource" EntityType="Self.resource" />
+    <EntitySet Name="resourcestimeoff" EntityType="Self.resourcestimeoff" />
+    <EntitySet Name="servicios" EntityType="Self.servicios" />
+    <EntitySet Name="shoptimetable" EntityType="Self.shoptimetable" />
+    <EntitySet Name="shopworkingslices" EntityType="Self.shopworkingslices" />
+    <AssociationSet Name="resourceid" Association="Self.resourceid">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="calendarevent" EntitySet="calendarevent" />
+    </AssociationSet>
+    <AssociationSet Name="serviceid" Association="Self.serviceid">
+      <End Role="servicios" EntitySet="servicios" />
+      <End Role="calendarevent" EntitySet="calendarevent" />
+    </AssociationSet>
+    <AssociationSet Name="idResource" Association="Self.idResource">
+      <End Role="resource" EntitySet="resource" />
+      <End Role="resourcestimeoff" EntitySet="resourcestimeoff" />
+    </AssociationSet>
+    <AssociationSet Name="id" Association="Self.id">
+      <End Role="shoptimetable" EntitySet="shoptimetable" />
+      <End Role="shopworkingslices" EntitySet="shopworkingslices" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

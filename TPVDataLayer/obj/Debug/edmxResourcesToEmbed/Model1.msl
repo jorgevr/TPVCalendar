@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tpvenlanubecalendarModelStoreContainer" CdmEntityContainer="tpvenlanubecalendarEntities">
+    <EntitySetMapping Name="calendarevent">
+      <EntityTypeMapping TypeName="tpvenlanubecalendarModel.calendarevent">
+        <MappingFragment StoreEntitySet="calendarevent">
+          <ScalarProperty Name="idcalendarevent" ColumnName="idcalendarevent" />
+          <ScalarProperty Name="resourceid" ColumnName="resourceid" />
+          <ScalarProperty Name="begindate" ColumnName="begindate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="serviceid" ColumnName="serviceid" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="locked" ColumnName="locked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="tpvenlanubecalendarModel.clients">
+        <MappingFragment StoreEntitySet="clients">
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="clientName" ColumnName="clientName" />
+          <ScalarProperty Name="numberOfVisits" ColumnName="numberOfVisits" />
+          <ScalarProperty Name="lastService" ColumnName="lastService" />
+          <ScalarProperty Name="lastProduct" ColumnName="lastProduct" />
+          <ScalarProperty Name="contactNumber" ColumnName="contactNumber" />
+          <ScalarProperty Name="clientPicture" ColumnName="clientPicture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resource">
+      <EntityTypeMapping TypeName="tpvenlanubecalendarModel.resource">
+        <MappingFragment StoreEntitySet="resource">
+          <ScalarProperty Name="idResource" ColumnName="idResource" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resourcestimeoff">
+      <EntityTypeMapping TypeName="tpvenlanubecalendarModel.resourcestimeoff">
+        <MappingFragment StoreEntitySet="resourcestimeoff">
+          <ScalarProperty Name="idresourcestimeoff" ColumnName="idresourcestimeoff" />
+          <ScalarProperty Name="startTimeOff" ColumnName="startTimeOff" />
+          <ScalarProperty Name="endTimeOff" ColumnName="endTimeOff" />
+          <ScalarProperty Name="resourceFK" ColumnName="resourceFK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicios">
+      <EntityTypeMapping TypeName="tpvenlanubecalendarModel.servicios">
+        <MappingFragment StoreEntitySet="servicios">
+          <ScalarProperty Name="idServicios" ColumnName="idServicios" />
+          <ScalarProperty Name="serviceName" ColumnName="serviceName" />
+          <ScalarProperty Name="averageDuration" ColumnName="averageDuration" />
+          <ScalarProperty Name="defaultColor" ColumnName="defaultColor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shoptimetable">
+      <EntityTypeMapping TypeName="tpvenlanubecalendarModel.shoptimetable">
+        <MappingFragment StoreEntitySet="shoptimetable">
+          <ScalarProperty Name="idshoptimetable" ColumnName="idshoptimetable" />
+          <ScalarProperty Name="sliceStart" ColumnName="sliceStart" />
+          <ScalarProperty Name="sliceEnd" ColumnName="sliceEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shopworkingslices">
+      <EntityTypeMapping TypeName="tpvenlanubecalendarModel.shopworkingslices">
+        <MappingFragment StoreEntitySet="shopworkingslices">
+          <ScalarProperty Name="idshopworkingslices" ColumnName="idshopworkingslices" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="shopTimeTableId" ColumnName="shopTimeTableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

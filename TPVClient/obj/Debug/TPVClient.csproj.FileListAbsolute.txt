@@ -1,0 +1,13 @@
+C:\Projects\Pruebas\TPVClient\bin\Debug\TPVClient.exe.config
+C:\Projects\Pruebas\TPVClient\bin\Debug\TPVClient.exe
+C:\Projects\Pruebas\TPVClient\bin\Debug\TPVClient.pdb
+C:\Projects\Pruebas\TPVClient\obj\Debug\TPVClient.csprojResolveAssemblyReference.cache
+C:\Projects\Pruebas\TPVClient\obj\Debug\MainWindow.baml
+C:\Projects\Pruebas\TPVClient\obj\Debug\MainWindow.g.cs
+C:\Projects\Pruebas\TPVClient\obj\Debug\App.g.cs
+C:\Projects\Pruebas\TPVClient\obj\Debug\TPVClient_MarkupCompile.cache
+C:\Projects\Pruebas\TPVClient\obj\Debug\TPVClient.g.resources
+C:\Projects\Pruebas\TPVClient\obj\Debug\TPVClient.Properties.Resources.resources
+C:\Projects\Pruebas\TPVClient\obj\Debug\TPVClient.csproj.GenerateResource.Cache
+C:\Projects\Pruebas\TPVClient\obj\Debug\TPVClient.exe
+C:\Projects\Pruebas\TPVClient\obj\Debug\TPVClient.pdb

@@ -1,0 +1,14 @@
+C:\Projects\Pruebas\TPVTests\obj\Debug\TPVTests.csprojResolveAssemblyReference.cache
+C:\Projects\Pruebas\TPVTests\bin\Debug\TPVTests.dll.config
+C:\Projects\Pruebas\TPVTests\bin\Debug\TPVTests.dll
+C:\Projects\Pruebas\TPVTests\bin\Debug\TPVTests.pdb
+C:\Projects\Pruebas\TPVTests\bin\Debug\EntityFramework.dll
+C:\Projects\Pruebas\TPVTests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\Pruebas\TPVTests\bin\Debug\TPVDataLayer.dll
+C:\Projects\Pruebas\TPVTests\bin\Debug\TPVDataLayer.pdb
+C:\Projects\Pruebas\TPVTests\bin\Debug\EntityFramework.xml
+C:\Projects\Pruebas\TPVTests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\Pruebas\TPVTests\obj\Debug\TPVTests.dll
+C:\Projects\Pruebas\TPVTests\obj\Debug\TPVTests.pdb
+C:\Projects\Pruebas\TPVTests\bin\Debug\MySql.Data.dll
+C:\Projects\Pruebas\TPVTests\bin\Debug\mysql.data.entity.EF6.dll

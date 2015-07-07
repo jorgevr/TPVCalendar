@@ -1,0 +1,13 @@
+C:\Projects\Pruebas\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Projects\Pruebas\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Projects\Pruebas\DataLayer\bin\Debug\DataLayer.dll
+C:\Projects\Pruebas\DataLayer\bin\Debug\DataLayer.pdb
+C:\Projects\Pruebas\DataLayer\obj\Debug\DataLayer.dll
+C:\Projects\Pruebas\DataLayer\obj\Debug\DataLayer.pdb
+C:\Projects\Pruebas\DataLayer\bin\Debug\EntityFramework.dll
+C:\Projects\Pruebas\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\Pruebas\DataLayer\bin\Debug\MySql.Data.dll
+C:\Projects\Pruebas\DataLayer\bin\Debug\mysql.data.entity.EF6.dll
+C:\Projects\Pruebas\DataLayer\bin\Debug\MySql.Web.dll
+C:\Projects\Pruebas\DataLayer\bin\Debug\EntityFramework.xml
+C:\Projects\Pruebas\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
